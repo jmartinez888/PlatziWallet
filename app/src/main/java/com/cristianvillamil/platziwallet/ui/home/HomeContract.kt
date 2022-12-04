@@ -1,5 +1,7 @@
 package com.cristianvillamil.platziwallet.ui.home
 
+import androidx.lifecycle.LiveData
+
 class HomeContract {
     interface View{
         fun showLoader()
@@ -9,6 +11,7 @@ class HomeContract {
 
     interface Presenter {
         fun retrieveFavoriteTransfers()
+        fun getPercentageLiveData() : LiveData<String>
     }
 
     interface  OnResponseCallBack {
